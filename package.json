@@ -1,0 +1,26 @@
+{
+  "name": "baucis-example",
+  "version": "0.0.1",
+  "description": "An example server that uses baucis",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "baucis",
+    "rest",
+    "api",
+    "express",
+    "mongo",
+    "mongodb",
+    "mongoose"
+  ],
+  "dependencies": {
+    "baucis": "~0.5.7",
+    "express": "~3.3.4",
+    "mongoose": "~3.6.14"
+  },
+  "author": "William Riley-Land",
+  "license": "MIT"
+}
