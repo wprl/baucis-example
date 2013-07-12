@@ -1,7 +1,8 @@
 An example server built using baucis.
 
-    npm install baucis-example
+    git clone git@github.com:wprl/baucis-example.git
     cd baucis-example
+    npm install
     node app
 
 Then make HTTP GET requests like:
@@ -12,4 +13,4 @@ Then make HTTP GET requests like:
     http://localhost:3333/api/v1/vegetables?select=_id
     http://localhost:3333/api/v1/vegetable/<_id>
 
-Check out POST, PUT, HEAD, and DELETE requests as well.
+Check out POST, PUT, HEAD, and DELETE requests as well…
