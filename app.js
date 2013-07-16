@@ -1,12 +1,18 @@
+// __Dependencies__
+
 var express = require('express');
 var mongoose = require('mongoose');
 var baucis = require('baucis');
 
+// __Main Program__
+
+// Connect to the Mongo instance
 mongoose.connect('mongodb://localhost/aAa-BaUcIs-ExAmPlE-AaA');
 
+// Create a Mongoose schema
 var Vegetable = new mongoose.Schema({ name: String });
 
-// Note that Mongoose middleware will be executed as usual
+// Note: Mongoose middleware will be executed where appropriate
 Vegetable.pre('save', function (next) { console.log('>>>>w00t<<<<'), next() });
 
 // Register the schema
