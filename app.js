@@ -9,17 +9,18 @@ var Vegetable = new mongoose.Schema({ name: String });
 // Note that Mongoose middleware will be executed as usual
 Vegetable.pre('save', function (next) { console.log('>>>>w00t<<<<'), next() });
 
-// Register the schemata
+// Register the schema
 mongoose.model('vegetable', Vegetable);
 
 // Create dummy data
 var names = [ 'tomato', 'turnip', 'lovage', 'snap pea', 'carrot', 'zucchini' ];
 var vegetables = names.map(function (name) { return { name: name } });
 
+// Clear the database of old vegetables
 mongoose.model('vegetable').remove(function (error) {
   if (error) throw error;
 
-  mongoose.model('vegetable').create(vegetables, function () {
+  mongoose.model('vegetable').create(vegetables, function (error) {
     if (error) throw error;
 
     // Create the API routes
