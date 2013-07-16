@@ -20,6 +20,7 @@ var vegetables = names.map(function (name) { return { name: name } });
 mongoose.model('vegetable').remove(function (error) {
   if (error) throw error;
 
+  // Put the fresh vegetables in the database
   mongoose.model('vegetable').create(vegetables, function (error) {
     if (error) throw error;
 
