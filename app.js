@@ -12,16 +12,11 @@ mongoose.connect('mongodb://localhost/aAa-BaUcIs-ExAmPlE-AaA');
 // Create a Mongoose schema
 var Vegetable = new mongoose.Schema({ name: String });
 
-<<<<<<< HEAD
 // Note that Mongoose middleware will be executed as usual
 Vegetable.pre('save', function (next) {
   console.log('A vegetable was saved to Mongo: %s.', this.get('name'));
   next();
 });
-=======
-// Note: Mongoose middleware will be executed where appropriate
-Vegetable.pre('save', function (next) { console.log('>>>>w00t<<<<'), next() });
->>>>>>> b500ae49ff92b93d10077bd823e9b72f602434cf
 
 // Register the schema
 mongoose.model('vegetable', Vegetable);
