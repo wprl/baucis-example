@@ -7,7 +7,10 @@ mongoose.connect('mongodb://localhost/aAa-BaUcIs-ExAmPlE-AaA');
 var Vegetable = new mongoose.Schema({ name: String });
 
 // Note that Mongoose middleware will be executed as usual
-Vegetable.pre('save', function (next) { console.log('>>>>w00t<<<<'), next() });
+Vegetable.pre('save', function (next) {
+  console.log('A vegetable was saved to Mongo: %s.', this.get('name'));
+  next();
+});
 
 // Register the schemata
 mongoose.model('vegetable', Vegetable);
@@ -29,6 +32,8 @@ mongoose.model('vegetable').remove(function (error) {
     var app = express();
     app.use('/api/v1', baucis());
     app.listen(3333);
+
+    console.log('Server listening on port 3333.');
   });
 });
 
