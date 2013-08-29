@@ -38,7 +38,7 @@ mongoose.model('vegetable').remove(function (error) {
 
     // Create the app and listen for API requests
     var app = express();
-    app.use('/api/v1', baucis());
+    app.use('/api/v1', baucis({ swagger: true }));
     app.listen(3333);
 
     console.log('Server listening on port 3333.');
