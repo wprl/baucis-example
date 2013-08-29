@@ -14,7 +14,7 @@ Now that the server is running, make HTTP GET requests like:
     http://localhost:3333/api/v1/vegetables?conditions={ "name": "tomato" }
     http://localhost:3333/api/v1/vegetables?conditions={ "name": { "$regex": "t" } }
     http://localhost:3333/api/v1/vegetables?select=_id
-    http://localhost:3333/api/v1/vegetable/<_id>
+    http://localhost:3333/api/v1/vegetables/<_id>
 
 Check out POST, PUT, HEAD, and DELETE requests as well…
 
