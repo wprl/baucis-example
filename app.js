@@ -38,6 +38,7 @@ mongoose.model('vegetable').remove(function (error) {
 
     // Create the app and listen for API requests
     var app = express();
+    app.use(express.urlencoded());
     app.use('/api/v1', baucis({ swagger: true }));
     app.listen(3333);
 
