@@ -3,11 +3,12 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var baucis = require('baucis');
+var swagger = require('baucis-swagger');
 
 // __Main Program__
 
 // Connect to the Mongo instance
-mongoose.connect('mongodb://localhost/aAa-BaUcIs-ExAmPlE-AaA');
+mongoose.connect('mongodb://10.0.0.101/aAa-BaUcIs-ExAmPlE-AaA');
 
 // Create a Mongoose schema
 var Vegetable = new mongoose.Schema({ name: String });
@@ -38,7 +39,7 @@ mongoose.model('vegetable').remove(function (error) {
 
     // Create the app and listen for API requests
     var app = express();
-    app.use('/api/v1', baucis({ swagger: true }));
+    app.use('/api', baucis());
     app.listen(3333);
 
     console.log('Server listening on port 3333.');
