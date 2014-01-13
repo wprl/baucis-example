@@ -1,6 +1,6 @@
 {
   "name": "baucis-example",
-  "version": "0.14.2",
+  "version": "1.0.0",
   "description": "An example server that uses baucis to create a REST API",
   "main": "app.js",
   "scripts": {
@@ -17,10 +17,10 @@
     "mongoose"
   ],
   "dependencies": {
-    "baucis": "~0.14.0",
+    "baucis": "~0.14.1",
     "express": "~3.4.6",
     "mongoose": "~3.8.1",
-    "baucis-swagger": "~0.1.0"
+    "baucis-swagger": "~0.2.0"
   },
   "author": "William Riley-Land",
   "license": "MIT"
