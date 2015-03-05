@@ -30,5 +30,5 @@ First, download the [swagger-ui](https://github.com/wordnik/swagger-ui) client.
 
 Point it at your API.
 
-    http://localhost:3333/api/api-docs
+    http://localhost:3333/api/documentation
 
