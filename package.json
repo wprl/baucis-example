@@ -1,6 +1,6 @@
 {
   "name": "baucis-example",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An example server that uses baucis to create a REST API",
   "homepage": "https://github.com/wprl/baucis-example",
   "repository": {
@@ -28,7 +28,7 @@
     "baucis": "^1.0.0",
     "baucis-swagger": "^1.0.0",
     "express": "^4.12.0",
-    "mongoose": "^3.8.23"
+    "mongoose": "3.8.x"
   },
   "author": "William Riley-Land",
   "license": "MIT"

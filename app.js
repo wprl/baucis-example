@@ -8,7 +8,7 @@ var swagger = require('baucis-swagger');
 // __Main Program__
 
 // Connect to the Mongo instance
-mongoose.connect('mongodb://10.0.0.101/aAa-BaUcIs-ExAmPlE-AaA');
+mongoose.connect('mongodb://localhost/aAa-BaUcIs-ExAmPlE-AaA');
 
 // Create a Mongoose schema
 var Vegetable = new mongoose.Schema({ name: String });
